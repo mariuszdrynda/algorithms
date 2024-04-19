@@ -18,5 +18,6 @@ int sieve(const int count){
     return result;
 }
 int main(){
-    std::cout << sieve(1000000);
+    constexpr int number = 1000000;
+    std::cout << "Nr of primes between 0 and " << number << ": " << sieve(number);
 }
