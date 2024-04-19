@@ -39,7 +39,6 @@ and' = LAM (VAR "p") (LAM (VAR "q") (APP (APP (VAR "p") (VAR "q")) (VAR "p")))
 or' =  LAM (VAR "p") (LAM (VAR "q") (APP (APP (VAR "p") (VAR "p")) (VAR "q")))
 
 main = do
-    print $ execute (APP plus one)
     print $ execute (APP successor zero) == one --True
     print $ execute (APP successor (APP successor zero)) == two--True
     print $ execute (APP successor one) == two --True
